@@ -9,48 +9,66 @@
 </head>
 <body>
 
-  <div id="sidebar">
-    <div class="sidebar-header">
-      <h2>☁️ Super Gmail</h2>
-      <button id="toggleSidebar">☰</button>
+  <!-- LOGIN PAGE -->
+  <div id="loginPage" class="page active">
+    <div class="login-container">
+      <h1>🔐 Super Gmail</h1>
+      <input type="text" id="loginUsername" placeholder="Username" />
+      <input type="password" id="loginPassword" placeholder="Password" />
+      <div class="login-buttons">
+        <button id="loginBtn">Masuk</button>
+        <button id="registerInfo">Daftar Lewat Bot</button>
+      </div>
+      <p class="info">Belum punya akun? Daftar via <a href="https://t.me/angkasanyabobo" target="_blank">@angkasanyabobo</a></p>
     </div>
-    <ul>
-      <li data-page="home">🏠 Halaman Utama</li>
-      <li data-page="job">💼 Job Gmail</li>
-      <li data-page="saldo">💰 Saldo</li>
-      <li data-page="leaderboard">🏆 Leaderboard</li>
-      <li data-page="contact">📞 Contact Owner</li>
-    </ul>
   </div>
 
-  <div id="content">
-    <div id="page-home" class="page active">
-      <h1>Selamat Datang di Super Gmail</h1>
-      <p>Kelola dan setor Gmail untuk mendapatkan poin otomatis.</p>
-    </div>
-
-    <div id="page-job" class="page">
-      <h2>💼 Job Gmail</h2>
-      <div class="stats">
-        <div>Total User: <span id="totalUsers">0</span></div>
-        <div>Gmail Disetor: <span id="totalGmail">0</span></div>
-        <div>Poin Total: <span id="totalPoints">0</span></div>
+  <!-- DASHBOARD PAGE -->
+  <div id="dashboard" class="hidden">
+    <nav id="sidebar" class="closed">
+      <div class="sidebar-header">
+        <h2>☁️ Super Gmail</h2>
+        <button id="toggleSidebar">☰</button>
       </div>
+      <ul>
+        <li data-page="home">🏠 Halaman Utama</li>
+        <li data-page="job">💼 Job Gmail</li>
+        <li data-page="saldo">💰 Saldo</li>
+        <li data-page="leaderboard">🏆 Leaderboard</li>
+        <li data-page="contact">📞 Contact Owner</li>
+        <li id="logoutBtn">🚪 Logout</li>
+      </ul>
+    </nav>
 
-      <div class="form-container">
-        <h3>Setor Gmail</h3>
-        <input type="email" id="gmailInput" placeholder="Alamat Gmail" required />
-        <input type="password" id="passInput" placeholder="Password Gmail" required />
-        <div class="btn-row">
-          <button id="setorBtn">Setor</button>
-          <button id="batalBtn">Batal</button>
+    <main id="content">
+      <section id="page-home" class="page active">
+        <h1>Selamat Datang di Super Gmail</h1>
+        <p>Kelola dan setor Gmail untuk mendapatkan poin otomatis.</p>
+      </section>
+
+      <section id="page-job" class="page">
+        <h2>💼 Job Gmail</h2>
+        <div class="stats">
+          <div>Total User: <span id="totalUsers">0</span></div>
+          <div>Gmail Disetor: <span id="totalGmail">0</span></div>
+          <div>Poin Total: <span id="totalPoints">0</span></div>
         </div>
-      </div>
-    </div>
 
-    <div id="page-saldo" class="page"><h2>💰 Saldo</h2><p>Saldo Anda: <span id="saldoUser">0</span> Poin</p></div>
-    <div id="page-leaderboard" class="page"><h2>🏆 Leaderboard</h2><ul id="leaderList"></ul></div>
-    <div id="page-contact" class="page"><h2>📞 Contact Owner</h2><p>Hubungi admin via Telegram: <a href="https://t.me/angkasanyabobo" target="_blank">@angkasanyabobo</a></p></div>
+        <div class="form-container">
+          <h3>Setor Gmail</h3>
+          <input type="email" id="gmailInput" placeholder="Alamat Gmail" required />
+          <input type="password" id="passInput" placeholder="Password Gmail" required />
+          <div class="btn-row">
+            <button id="setorBtn">Setor</button>
+            <button id="batalBtn">Batal</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="page-saldo" class="page"><h2>💰 Saldo</h2><p>Saldo Anda: <span id="saldoUser">0</span> Poin</p></section>
+      <section id="page-leaderboard" class="page"><h2>🏆 Leaderboard</h2><ul id="leaderList"></ul></section>
+      <section id="page-contact" class="page"><h2>📞 Contact Owner</h2><p>Hubungi admin via Telegram: <a href="https://t.me/angkasanyabobo" target="_blank">@angkasanyabobo</a></p></section>
+    </main>
   </div>
 
 </body>
