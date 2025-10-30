@@ -1,27 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: #f8f9fb;
-  color: #222;
-  display: flex;
-  min-height: 100vh;
+  background: #0f172a;
+  color: #f1f5f9;
   overflow-x: hidden;
 }
 
+/* LOGIN PAGE */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #a78bfa;
+}
+
+.login-container input {
+  width: 250px;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 8px;
+  border: none;
+  background: #1e293b;
+  color: white;
+}
+
+.login-container button {
+  padding: 10px 20px;
+  margin: 8px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#loginBtn {
+  background: #7c3aed;
+  color: white;
+}
+
+#registerInfo {
+  background: #475569;
+  color: #f1f5f9;
+}
+
+.login-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.info {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* SIDEBAR */
 #sidebar {
   background: #1e293b;
   color: white;
-  width: 250px;
-  transition: all 0.3s;
-  padding: 15px;
+  width: 230px;
   position: fixed;
-  left: 0;
   top: 0;
   bottom: 0;
+  left: -230px;
+  transition: left 0.3s ease;
+  padding: 15px;
+  z-index: 10;
 }
 
-#sidebar.closed {
-  transform: translateX(-220px);
+#sidebar.open {
+  left: 0;
 }
 
 .sidebar-header {
@@ -46,23 +106,17 @@ ul li {
 }
 
 ul li:hover {
-  background: #475569;
+  background: #7c3aed;
 }
 
 #content {
-  flex: 1;
-  margin-left: 270px;
+  margin-left: 0;
   padding: 30px;
   transition: margin-left 0.3s;
 }
 
-#sidebar.closed + #content {
-  margin-left: 70px;
-}
-
 .page {
   display: none;
-  animation: fadeIn 0.3s ease;
 }
 
 .page.active {
@@ -76,18 +130,18 @@ ul li:hover {
 }
 
 .stats div {
-  background: white;
+  background: #1e293b;
   padding: 10px 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.3);
 }
 
 .form-container {
-  background: white;
+  background: #1e293b;
   padding: 20px;
   border-radius: 10px;
   width: 300px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.4);
 }
 
 input {
@@ -95,7 +149,9 @@ input {
   margin: 8px 0;
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: none;
+  background: #334155;
+  color: #f1f5f9;
 }
 
 .btn-row {
@@ -108,16 +164,11 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background: #2563eb;
+  background: #7c3aed;
   color: white;
   font-weight: bold;
 }
 
 button:hover {
-  background: #1d4ed8;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(5px); }
-  to { opacity: 1; transform: translateY(0); }
+  background: #6d28d9;
 }
