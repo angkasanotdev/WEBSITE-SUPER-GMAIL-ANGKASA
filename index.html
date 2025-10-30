@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Gmail Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="app.js" defer></script>
+</head>
+<body>
+
+  <div id="sidebar">
+    <div class="sidebar-header">
+      <h2>☁️ Super Gmail</h2>
+      <button id="toggleSidebar">☰</button>
+    </div>
+    <ul>
+      <li data-page="home">🏠 Halaman Utama</li>
+      <li data-page="job">💼 Job Gmail</li>
+      <li data-page="saldo">💰 Saldo</li>
+      <li data-page="leaderboard">🏆 Leaderboard</li>
+      <li data-page="contact">📞 Contact Owner</li>
+    </ul>
+  </div>
+
+  <div id="content">
+    <div id="page-home" class="page active">
+      <h1>Selamat Datang di Super Gmail</h1>
+      <p>Kelola dan setor Gmail untuk mendapatkan poin otomatis.</p>
+    </div>
+
+    <div id="page-job" class="page">
+      <h2>💼 Job Gmail</h2>
+      <div class="stats">
+        <div>Total User: <span id="totalUsers">0</span></div>
+        <div>Gmail Disetor: <span id="totalGmail">0</span></div>
+        <div>Poin Total: <span id="totalPoints">0</span></div>
+      </div>
+
+      <div class="form-container">
+        <h3>Setor Gmail</h3>
+        <input type="email" id="gmailInput" placeholder="Alamat Gmail" required />
+        <input type="password" id="passInput" placeholder="Password Gmail" required />
+        <div class="btn-row">
+          <button id="setorBtn">Setor</button>
+          <button id="batalBtn">Batal</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="page-saldo" class="page"><h2>💰 Saldo</h2><p>Saldo Anda: <span id="saldoUser">0</span> Poin</p></div>
+    <div id="page-leaderboard" class="page"><h2>🏆 Leaderboard</h2><ul id="leaderList"></ul></div>
+    <div id="page-contact" class="page"><h2>📞 Contact Owner</h2><p>Hubungi admin via Telegram: <a href="https://t.me/angkasanyabobo" target="_blank">@angkasanyabobo</a></p></div>
+  </div>
+
+</body>
+</html>
