@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Gmail - Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="js/main.js" defer></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white flex h-screen">
+  <!-- Sidebar -->
+  <div id="sidebar" class="bg-gray-800 w-64 p-4 fixed h-full transform -translate-x-full transition-transform duration-300">
+    <h2 class="text-2xl font-bold mb-6">Menu</h2>
+    <ul>
+      <li><button class="menu-btn block w-full text-left py-2 hover:bg-gray-700" data-page="contact">📞 Contact Owner</button></li>
+      <li><button class="menu-btn block w-full text-left py-2 hover:bg-gray-700" data-page="saldo">💰 Saldo</button></li>
+      <li><button class="menu-btn block w-full text-left py-2 hover:bg-gray-700" data-page="leaderboard">🏆 Leaderboard</button></li>
+      <li><button class="menu-btn block w-full text-left py-2 hover:bg-gray-700" data-page="job">💼 Job Gmail</button></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-1 p-6 ml-0 transition-all duration-300" id="main">
+    <button id="toggleSidebar" class="bg-blue-600 px-4 py-2 rounded mb-4">☰ Menu</button>
+    <div id="content">
+      <h1 class="text-3xl font-bold mb-4">Selamat Datang di Super Gmail</h1>
+      <p>Pilih menu dari sidebar untuk mulai bekerja 💪</p>
+    </div>
+  </div>
+</body>
+</html>

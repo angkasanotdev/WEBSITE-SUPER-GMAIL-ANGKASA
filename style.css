@@ -1,0 +1,196 @@
+/* === RESET DASAR === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0a0f1a;
+  color: #fff;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* === LOGIN PAGE === */
+.login-container {
+  background: linear-gradient(145deg, #10192d, #0a0f1a);
+  border: 1px solid #1c2943;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  width: 340px;
+  padding: 2rem;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.login-container:hover {
+  transform: scale(1.02);
+}
+
+.login-container h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.login-container p {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #1b2335;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.login-container input:focus {
+  border: 1px solid #3b82f6;
+  background-color: #111827;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+  background: linear-gradient(90deg, #1d4ed8, #2563eb);
+}
+
+/* === SIDEBAR === */
+#sidebar {
+  background: linear-gradient(180deg, #10192d, #0c1424);
+  box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+#sidebar h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+#sidebar ul li {
+  margin-bottom: 0.5rem;
+}
+
+#sidebar .menu-btn {
+  width: 100%;
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #d1d5db;
+  transition: 0.2s;
+}
+
+#sidebar .menu-btn:hover {
+  background-color: #1e293b;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* === MAIN CONTENT === */
+#main {
+  background-color: #0b1220;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+#toggleSidebar {
+  background-color: #2563eb;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#toggleSidebar:hover {
+  background-color: #1d4ed8;
+}
+
+/* === CARD STATS (job gmail box) === */
+.stat-card {
+  background-color: #10192d;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+}
+
+/* === FORM JOB GMAIL === */
+.form-job {
+  background-color: #10192d;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid #1e293b;
+}
+
+.form-job input {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #0f172a;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+.form-job input:focus {
+  outline: 2px solid #3b82f6;
+}
+
+.form-job button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#btnSetor {
+  background-color: #16a34a;
+}
+
+#btnSetor:hover {
+  background-color: #15803d;
+}
+
+.form-job .btn-cancel {
+  background-color: #dc2626;
+}
+
+.form-job .btn-cancel:hover {
+  background-color: #b91c1c;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  #sidebar {
+    width: 75%;
+  }
+
+  .login-container {
+    width: 90%;
+  }
+}
